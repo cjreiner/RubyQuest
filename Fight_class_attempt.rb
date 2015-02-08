@@ -18,18 +18,19 @@ class Fight
 			if (@attack_location=="High" && @block_location==1) || (@attack_location=="Low" && @block_location==2)
 				puts "Success! -1 health to your enemy!"
 				@enemy.health = @enemy.health - 1
+				puts "Your enemy's health is now: #{@enemy.health}"
 			else
 				puts "Miss! Try again! -1 health to you! OUCH!"
-				puts "Your health is #{@player.health}"
 				@player.health = @player.health - 1
+				puts "Your health is now: #{@player.health}"
 			end #end if
 		end #end until loop
 		
 		if @player.health==0
 			puts "You lost! Game over"
 			exit
-		else 
-			"You win! This room is now clear"
+		else
+			puts "You win! This room is now clear"
 			@has_enemy = false
 		end
 	

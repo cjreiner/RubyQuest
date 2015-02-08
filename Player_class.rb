@@ -9,7 +9,8 @@ class Player
 	#this section will control the movement between rooms
 	def enter(room) #we will pass each room from the array
 		#evlaute if an enemy is in the room. and run the fight class
-		if room.has_enemy 
+		if room.has_enemy
+			puts "This room has an enemy!" 
 			fight = Fight.new(self,room.enemy,room.has_enemy) #player passes itself into the method to be used.
 			fight.attack
 		end

@@ -36,7 +36,7 @@ game_length.times do
 end
 
 #place the ruby into the last room
-rooms[game_length].has_ruby = true
+rooms[game_length-1].has_ruby = true
 
 #now that the rooms are created this begins game play. We enter each room
 #so now, head over the to player class to follow the
